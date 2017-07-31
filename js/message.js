@@ -9,11 +9,12 @@
     return messages = {};
   };
 
+  
   /**
-   * Inserts a new message into the messages object.
-   *
-   * @param message {string} : new message
-   * @returns {object} : all messages object
+   * Insert new message to the messages object.
+   * 
+   * @param {string} : user input (message) 
+   * @returns {object} : all messages
    */
   Chatty.insertNewMessage = function(message) {
     let indexes = Object.keys(messages);
@@ -28,8 +29,14 @@
     }
   };
 
+  /**
+   * Deletes a single message id and returns messages object. 
+   * 
+   * @param {string} : message id 
+   * @returns {object} : all messages
+   */
   Chatty.deleteSingleMessage = function(id) {
-    return delete messages[id];
+    delete messages[id];
     return messages;
   };
 

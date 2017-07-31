@@ -1,5 +1,76 @@
+h2{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+h3{
+	color: red;
+	font-size: 1em;
+}
+
 .icon-logo img {
   display: block;
-  width: 67px; }
+  width: 100px; }
+
+.navbar{
+	background-color: black;
+}
+
+.col img{
+	width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.btn-outline-success{
+	border: 1px solid red;
+	color: white;
+}
+
+.btn-outline-success:hover{
+	background-color: red;
+}
+
+.container {
+  margin-top: 140px; 
+  margin-bottom: 50px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  margin-top: -140px;
+  z-index: 10; }
+
+.list-group-item-danger {
+  text-align: center; }
+
+.fa{
+	padding-right: 10px;
+}
+
+#superhero, #theme {
+	text-align: center;
+}
+
+.hero-messages img{
+	width: 45px;
+	/*display: inline-block;*/
+	float: left;
+	margin: 5px;
+}
+
+#delete-btn{
+	margin: 10px;
+	padding: 5px;
+}
+
+button{
+	cursor: pointer;
+}
+
+
+
+
 
 /*# sourceMappingURL=main.css.map */
