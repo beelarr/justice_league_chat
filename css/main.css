@@ -3,6 +3,11 @@ h2{
 	text-align: center;
 }
 
+h3{
+	color: red;
+	font-size: 1em;
+}
+
 .icon-logo img {
   display: block;
   width: 100px; }
@@ -27,7 +32,9 @@ h2{
 }
 
 .container {
-  margin-top: 140px; }
+  margin-top: 140px; 
+  margin-bottom: 50px;
+}
 
 header {
   position: fixed;
@@ -45,6 +52,24 @@ header {
 #superhero, #theme {
 	text-align: center;
 }
+
+.hero-messages img{
+	width: 45px;
+	/*display: inline-block;*/
+	float: left;
+	margin: 5px;
+}
+
+#delete-btn{
+	margin: 10px;
+	padding: 5px;
+}
+
+button{
+	cursor: pointer;
+}
+
+
 
 
 
