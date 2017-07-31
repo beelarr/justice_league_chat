@@ -1,3 +1,4 @@
+
 h2{
 	font-size: 1.5em;
 	text-align: center;
@@ -8,28 +9,10 @@ h3{
 	font-size: 1em;
 }
 
+
 .icon-logo img {
   display: block;
-  width: 100px; }
-
-.navbar{
-	background-color: black;
-}
-
-.col img{
-	width: 100%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-}
-
-.btn-outline-success{
-	border: 1px solid red;
-	color: white;
-}
-
-.btn-outline-success:hover{
-	background-color: red;
-}
+  width: 67px; }
 
 .container {
   margin-top: 140px; 
@@ -44,6 +27,11 @@ header {
 
 .list-group-item-danger {
   text-align: center; }
+
+
+.delete-container {
+  display: flex;
+  justify-content: center; }
 
 .fa{
 	padding-right: 10px;
@@ -68,6 +56,7 @@ header {
 button{
 	cursor: pointer;
 }
+
 
 
 
