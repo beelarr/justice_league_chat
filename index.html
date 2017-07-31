@@ -35,7 +35,7 @@
                     </div>
                 </li>
             </ul> -->
-                <input class="form-control mr-sm-2" type="text" placeholder="Message">
+                <input class="form-control mr-sm-2" type="text" id="userMessage" placeholder="Message">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="postMessage">Post</button>
 
 
@@ -65,34 +65,44 @@
   <!--       <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Porta ac consectetur ac</a> -->
        <a href="#" class="list-group-item list-group-item-action"><button type="button" class="btn btn-secondary btn-block id="enlargeText"><span><i class="fa fa-text-height" aria-hidden="true"></i></span> Enlarge Text</button></a>
 
-        <a href="#" class="list-group-item list-group-item-action list-group-item-danger"><button type="button" class="btn btn-danger btn-block" id="deleteAllMessages">Delete All Messages</button></a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-danger"><button type="button" class="btn btn-danger btn-block" id="deleteAllMessages"> <i class="fa fa-trash-o" aria-hidden="true"></i>Delete All Messages</button></a>
 
 
     </div>
 </div>
-
-
-
 
     <div class="col col-8">
     <ul class="list-group">
-        <li class="list-group-item justify-content-between">
-            Cras justo odio
-            <span class="badge badge-default badge-pill">14</span>
+        <li class="list-group-item justify-content-between hero-messages"><img src="images/wonderwomanicon.png"><h3>Wonder Woman Says:</h3>
+            This is a message from blahhhhh This is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhh
+            <button id="delete-btn" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message
+            </button>
         </li>
-   <!--      <li class="list-group-item justify-content-between">
-            Dapibus ac facilisis in
-            <span class="badge badge-default badge-pill">2</span>
+
+        <li class="list-group-item justify-content-between hero-messages"><img src="images/batmanicon.png"><h3>Batman Says:</h3>
+            This is a message from blahhhhh This is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhh
+            <button id="delete-btn" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message
+            </button>
         </li>
-        <li class="list-group-item justify-content-between">
-            Morbi leo risus
-            <span class="badge badge-default badge-pill">1</span>
-        </li> -->
+
+        <li class="list-group-item justify-content-between hero-messages"><img src="images/flashicon.png"><h3>Flash Says:</h3>
+            This is a message from blahhhhh This is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhh
+           <button id="delete-btn" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message
+            </button></li>
+
+        <li class="list-group-item justify-content-between hero-messages"><img src="images/supermanicon.png"><h3>Super Man Says:</h3>
+            This is a message from blahhhhh This is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhh
+           <button id="delete-btn" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message</button>
+                 </li>
+ 
     </ul>
     </div>
+    </div>
 </div>
-</div>
-
 
 
 <script src="https://use.fontawesome.com/9986bfaa56.js"></script>
@@ -102,6 +112,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="js/chatty.js"></script>
 <script src="js/message.js"></script>
+<script type="text/javascript" src="event-listeners.js"></script>
 
 </body>
 </html>
