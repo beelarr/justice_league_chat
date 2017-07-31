@@ -15,11 +15,13 @@
     let items = ''
     let keys = Object.keys(jsonData)
 
-    keys.forEach(function(item) {
-      items += `<li class="list-group-item justify-content-between">
+    keys.forEach(function (item) {
+      items += `<li class="list-group-item justify-content-between hero-messages"><img src="images/wonderwomanicon.png"><h3>Wonder Woman Says:</h3>
                     ${jsonData[item]}
-                    <span class="badge badge-default badge-pill">14</span>
-                </li>`
+                    <button id="delete-btn" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                      <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message
+                    </button>
+                </li>`;
     });
     messageContainer.innerHTML = items;
   };
