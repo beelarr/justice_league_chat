@@ -1,7 +1,23 @@
 {
-  "message": "I'm looking for a job as a senior web developer.",
-  "902": "Why you want to do that? You don't like to be part of the JL?",
-  "903": "I'm just want to try something different.",
-  "904": "Try to look for a Junior position instead. You are just learning.",
-  "905": "I don't know if developer's salary pays as much as been a supper hero."
+
+  "100": {
+    "message": "I'm looking for a job as a senior web developer.",
+    "img": "images/defaultusericon.png"
+  },
+  "101": {
+    "message": "Why you want to do that? You don't like to be part of the JL?",
+    "img": "images/defaultusericon.png"
+  },
+  "102": {
+    "message": "I'm just want to try something different.",
+    "img": "images/defaultusericon.png"
+  },
+  "103": {
+    "message": "Try to look for a Junior position instead. You are just learning.",
+    "img": "images/defaultusericon.png"
+  },
+  "104": {
+    "message": "I don't know if developer's salary pays as much as been a supper hero.",
+    "img": "images/defaultusericon.png"
+  }
 }

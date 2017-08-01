@@ -32,24 +32,35 @@
 
   // Render data in page.
   Chatty.writeMessageToDOM = function(jsObject, img, name) {
-    let messageContainer = document.querySelector(".message-container");
-    let ulMessageElement = document.createElement("ul");
-    ulMessageElement.classList = 'list-group';
+    let ulMessageElement = document.querySelector(".message-container");
+    let liElement = document.createElement("li");
+    liElement.classList =
+      "list-group-item justify-content-between hero-messages";
     let items = "";
     let keys = Object.keys(jsObject);
-    
+
     keys.forEach(function(item) {
-      items = `<li class="list-group-item justify-content-between hero-messages">
-                <div class="messageHeader"><img src="${jsObject[item].img}">
-                <h3>${name} Says:</h3></div>
-                    <div class="messageBody"><p>${jsObject[item].message}</p>
-                    <p><button id="delete-btn" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message
-                    </button></p></div>
-                </li>`;
-      ulMessageElement.innerHTML = items;
+
+      items = `<div class="messageHeader"><img src="${jsObject[item].img}">
+                  <h3>${name} Says:</h3>
+                </div>
+                <div class="messageBody">
+                  <p>${jsObject[item].message}</p>
+                  <p>
+                    <button id="${item}" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message</button>
+                  </p>
+                </div>`;
+      liElement.innerHTML = items;
+
     });
-    messageContainer.insertBefore(ulMessageElement, messageContainer.childNodes[0]);
+    // console.log(ulMessageElement.has);
+    // if (ulMessageElement.childNodes) {
+    //   ulMessageElement.appendChild(liElement);
+    // } else {
+    //   ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
+    // }
+    ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
   };
   // End of Render data in page.
 }
