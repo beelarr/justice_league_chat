@@ -16,8 +16,7 @@ to add those to the array.
 
 deleteAllMessagesBtn.addEventListener("click", () => {
   Chatty.deleteAllMessages();
-  messageContainer.innerHTML = `<div class="messages-cleared">All Messages Have Been Cleared<br>
-								<img src="images/jllogo.png"></div>`;
+  messageContainer.innerHTML = `<div class="messages-cleared"><img src="images/justice-league-logo.gif"></div>`;
 });
 
 ////POST MESSAGES TO THE DOM////////
