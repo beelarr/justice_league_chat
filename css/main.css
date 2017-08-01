@@ -46,8 +46,6 @@ header {
   text-align: center; }
 
 
-
-
 .delete-container {
   display: flex;
   justify-content: center; }
@@ -89,10 +87,6 @@ header {
 	width: 100%;
 }
 
-#delete-btn{
-	margin: 10px;
-	padding: 5px;
-}
 
 button{
 	cursor: pointer;

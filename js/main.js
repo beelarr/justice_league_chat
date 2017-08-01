@@ -39,7 +39,6 @@
     let keys = Object.keys(jsObject);
     
     keys.forEach(function(item) {
-    console.log('keys: ', jsObject[item].img);
       items = `<li class="list-group-item justify-content-between hero-messages">
                 <div class="messageHeader"><img src="${jsObject[item].img}">
                 <h3>${name} Says:</h3></div>
