@@ -41,6 +41,7 @@
     let keys = Object.keys(jsObject);
     
     keys.forEach(function(item) {
+
       items = `<div class="messageHeader"><img src="${jsObject[item].img}">
                   <h3>${name} Says:</h3>
                 </div>
@@ -52,6 +53,7 @@
                   </p>
                 </div>`;
       liElement.innerHTML = items;
+
     });
     ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
   };

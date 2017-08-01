@@ -4,7 +4,9 @@
     1: "images/batmanicon.png",
     2: "images/wonderwomanicon.png",
     3: "images/supermanicon.png",
-    4: "images/flashicon.png"
+    4: "images/flashicon.png",
+    5: "images/aquamanicon.png",
+    6: "images/cyborgicon.png",
   };
 
   let messages = {};

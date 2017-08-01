@@ -46,8 +46,6 @@ header {
   text-align: center; }
 
 
-
-
 .delete-container {
   display: flex;
   justify-content: center; }
@@ -89,10 +87,6 @@ header {
 	width: 100%;
 }
 
-#delete-btn{
-	margin: 10px;
-	padding: 5px;
-}
 
 button{
 	cursor: pointer;
@@ -127,6 +121,22 @@ button{
 	margin-left: 425px;
 }
 
+ 
+/********************* THEME.JS STYLING SECTION ***************/
+.darkTheme {
+    background-image: url("../images/DarkTheme.jpg"); 
+    background-size: contain;
+    color: white;
+}
+
+.clearBox {
+    background: rgba(0,0,0,.8);
+}
+
+.biggerText {
+    font-size: 2em;
+}
+/**************************************************************/
 
 
 /*# sourceMappingURL=main.css.map */
