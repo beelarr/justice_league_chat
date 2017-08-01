@@ -9,10 +9,6 @@
 
   let messages = {};
 
-  Chatty.getAllSuperHeroes = function() {
-    return superHeroes;
-  };
-
   Chatty.getAllMessages = function() {
     return messages;
   };
@@ -29,16 +25,15 @@
    * @returns {object} : all messages
    */
   Chatty.insertNewMessage = function(message, img) {
-    let heroesImages = Chatty.getAllSuperHeroes();
     let indexes = Object.keys(messages);
 
     if (indexes.length === 0) {
-      messages[0] = { message: message, imp: superHeroes[img] };
+      messages[0] = { message: message, img: superHeroes[img] };
       return messages;
     } else {
       let reverseIndexes = indexes.reverse();
       let lastIndex = parseInt(reverseIndexes[0]);
-      messages[lastIndex + 1] = { message: message, imp: superHeroes[img] };
+      messages[lastIndex + 1] = { message: message, img: superHeroes[img] };
       return messages;
     }
   };
