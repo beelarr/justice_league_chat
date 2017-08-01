@@ -1,44 +1,45 @@
 {
-  userMessage = document.querySelector("#userMessage");
-  // let superHeroDropDown = document.getElementById("superhero");
-  // let messageContainer = document.querySelector('.message-container');
-
   Chatty.getJsonData = function() {
     $.ajax({
       url: "js/chatty.json"
     }).done(function(data) {
-      Chatty.writeMessageToDOM(data);
+      for (item in data) {
+        Chatty.insertNewMessage(data[item].message, 0)
+      }
+      Chatty.writeJsonToDOM (Chatty.getAllMessages());
     });
   };
   Chatty.getJsonData();
   // End of Reading json data.
 
+  // Get user input and inserting into messages object.
   Chatty.getUserInput = function() {
-    let userMessageInput = userMessage.value;
+    let userMessage = document.querySelector("#userMessage");
+    let userMessageValue = userMessage.value;
     let superHeroKey = superHeroDropDown.value;
     let superHeroName = superHeroDropDown[superHeroKey].getAttribute("name");
 
-    // let superHeroImage = superHeroes[superHero];
-    Chatty.insertNewMessage(userMessageInput, superHeroKey);
+    Chatty.insertNewMessage(userMessageValue, superHeroKey);
     Chatty.writeMessageToDOM(
       Chatty.getAllMessages(),
       superHeroKey,
       superHeroName
     );
     userMessage.value = "";
-    // userMessage.getAttribute(name) = "";
     userMessage.focus();
   };
+  // End of Get user input and inserting into messages object.
 
   // Render data in page.
   Chatty.writeMessageToDOM = function(jsObject, img, name) {
     let ulMessageElement = document.querySelector(".message-container");
+    let noMessageElement = document.querySelector(".messages-cleared");
     let liElement = document.createElement("li");
     liElement.classList =
       "list-group-item justify-content-between hero-messages";
     let items = "";
     let keys = Object.keys(jsObject);
-
+    
     keys.forEach(function(item) {
 
       items = `<div class="messageHeader"><img src="${jsObject[item].img}">
@@ -47,20 +48,38 @@
                 <div class="messageBody">
                   <p>${jsObject[item].message}</p>
                   <p>
-                    <button id="${item}" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                    <button id="${item}" class="btn btn-danger btn-xs delete-message" data-title="Delete" data-toggle="modal" data-target="#delete" >
                     <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message</button>
                   </p>
                 </div>`;
       liElement.innerHTML = items;
 
     });
-    // console.log(ulMessageElement.has);
-    // if (ulMessageElement.childNodes) {
-    //   ulMessageElement.appendChild(liElement);
-    // } else {
-    //   ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
-    // }
     ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
   };
   // End of Render data in page.
+
+   // Render JSON data in page.
+  Chatty.writeJsonToDOM = function(jsObject, img, name) {
+    let ulMessageElement = document.querySelector(".message-container");
+    let items = "";
+    let keys = Object.keys(jsObject);
+    
+    keys.forEach(function(item) {
+      items += `<li class="list-group-item justify-content-between hero-messages">
+                  <div class="messageHeader"><img src="${jsObject[item].img}">
+                  <h3>${name} Says:</h3>
+                </div>
+                <div class="messageBody">
+                  <p>${jsObject[item].message}</p>
+                  <p>
+                    <button id="${item}" class="btn btn-danger btn-xs delete-message" data-title="Delete" data-toggle="modal" data-target="#delete" >
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message</button>
+                  </p>
+                </div>
+                </li>`;
+    });
+    ulMessageElement.innerHTML = items;
+  };
+  // End of Render JSON data in page.
 }

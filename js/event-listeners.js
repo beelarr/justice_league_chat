@@ -1,4 +1,5 @@
 let messageContainer = document.querySelector(".message-container");
+let noMessageElement = document.querySelector(".messages-cleared");
 
 let userMessage = document.getElementById("userMessage");
 let postMessageBtn = document.getElementById("postMessage");
@@ -6,7 +7,6 @@ let superHeroDropDown = document.getElementById("superhero");
 
 let enlargeTextBtn = document.getElementById("enlargeText");
 let deleteAllMessagesBtn = document.getElementById("deleteAllMessages");
-let deleteCurrentMessage = document.getElementById("delete-btn");
 
 //////CLEAR ALL MESSAGES////
 /*I tried to connect the chatty.js to delete all messages but 
@@ -20,6 +20,11 @@ deleteAllMessagesBtn.addEventListener("click", () => {
 								<img src="images/jllogo.png"></div>`;
 });
 
+messageContainer.addEventListener("click", function(event) {
+  console.log("Delete Btn: ", event.target.id);
+  Chatty.deleteSingleMessage(event.target.id);
+});
+
 ////POST MESSAGES TO THE DOM////////
 
 //this is for the "POST" button
@@ -28,14 +33,8 @@ postMessageBtn.addEventListener("click", () => {
 });
 
 //this is for the "ENTER" key press
-userMessage.addEventListener("keyup", function(pushEnter) {
-  let messages = Object.keys(Chatty.getAllMessages()).length;
-
-  if (pushEnter.keyCode === 13 && messages === 0) {
-    let noMessagesElement = document.querySelector(".messages-cleared");
-    messageContainer.remove(noMessagesElement);
-    Chatty.getUserInput();
-  } else if (pushEnter.keyCode === 13) {
+userMessage.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
     Chatty.getUserInput();
   }
 });
