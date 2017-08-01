@@ -1,87 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Justice League</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
 
 
 </head>
-    <body>
 
-<!-- Navigation and Header Bar -->
-        <header>
-            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-                <button 
-                    class="navbar-toggler navbar-toggler-right" 
-                    type="button" data-toggle="collapse" 
-                    data-target="#navbarNavDropdown" 
-                    aria-controls="navbarNavDropdown" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
+<body>
+
+    <!-- Navigation and Header Bar -->
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <a class="navbar-brand icon-logo" href="#">
+
+            <a class="navbar-brand icon-logo" href="#">
                     <img src="images/jllogo.png" alt="">
                 </a>
-                
-                <input class="form-control mr-sm-2" type="text" id="userMessage" placeholder="Message">
-                
-                <button 
-                    class="btn btn-outline-success my-2 my-sm-0" 
-                    type="submit" 
-                    id="postMessage">Post
+
+            <input class="form-control mr-sm-2" type="text" id="userMessage" placeholder="Message">
+
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="postMessage">Post
                 </button>
-            </nav>
-        </header>
+        </nav>
+    </header>
 
 
 
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
 
-                    <!-- Column 1 -->
-                <div class="col col-4">
-                    <img src="images/img01.jpg">
+            <!-- Column 1 -->
+            <div class="col col-4">
+                <img src="images/img01.jpg">
 
-                     <!-- Super Hero Select Group -->   
-                    <div class="list-group ">
-                        <a href="#" class="list-group-item list-group-item-action list-group-item-success">
+                <!-- Super Hero Select Group -->
+                <div class="list-group ">
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-success">
                         <select class="form-control" id="superhero">
-                            <option value="Default Hero">Select A Hero</option>
-                              <option value="Batman">Batman</option>
-                              <option value="Wonder Woman">Wonder Woman</option>
-                              <option value="Superman">Superman</option>
-                              <option value="Flash">Flash</option>
+                            <option value="0" name="Default Hero">Select A Hero</option>
+                              <option value="1" name="Batman">Batman</option>
+                              <option value="2" name="Wonder Woman">Wonder Woman</option>
+                              <option value="3" name="Superman">Superman</option>
+                              <option value="4" name="Flash">Flash</option>
                         </select></a>
-                    
-                    <!-- Theme Select Group --> 
-                        <a href="#" class="list-group-item list-group-item-action list-group-item-info">
+
+                    <!-- Theme Select Group -->
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info">
                         <select class="form-control" id="theme">
                           <option value="0">Select a Theme</option>
                           <option value="1">Dark</option>
                           <option value="2">Light</option>
                         </select></a>
 
-                    <!-- Enlarge Text Button --> 
-                       <a href="#" class="list-group-item list-group-item-action">
+                    <!-- Enlarge Text Button -->
+                    <a href="#" class="list-group-item list-group-item-action">
                             <button type="button" class="btn btn-secondary btn-block id="enlargeText">
                             <span><i class="fa fa-text-height" aria-hidden="true"></i></span> 
                             Enlarge Text</button>
                         </a>
 
-                    <!-- Delete All Messages Button --> 
-                        <a href="#" class="list-group-item list-group-item-action list-group-item-danger"><button type="button" class="btn btn-danger btn-block" id="deleteAllMessages"> <i class="fa fa-trash-o" aria-hidden="true"></i>Clear All Messages</button></a>
+                    <!-- Delete All Messages Button -->
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger"><button type="button" class="btn btn-danger btn-block" id="deleteAllMessages"> <i class="fa fa-trash-o" aria-hidden="true"></i>Clear All Messages</button></a>
 
-                    </div>
                 </div>
+            </div>
 
-                    <!-- Column 2 -->
-                    <div class="col col-8">
-                        <ul class="list-group message-container">
-                           <!--  <li class="list-group-item justify-content-between hero-messages">
+            <!-- Column 2 -->
+            <div class="col col-8">
+                <ul class="list-group message-container">
+                    <!--  <li class="list-group-item justify-content-between hero-messages">
                                 <img src="images/defaultusericon.png">
                                 <h3>Default Hero Says:</h3>
                                 <p>This is a message from blahhhhh This is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhhThis is a message from blahhhhh</p>
@@ -125,24 +120,27 @@
                                Delete Message
                                </button>
                             </li> -->
-                     
-                        </ul>
-                    </div>
+
+                </ul>
             </div>
         </div>
+    </div>
 
 
-        <script src="https://use.fontawesome.com/9986bfaa56.js"></script>
-        <script src="./js/jQuery-3.2.1.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <script src="js/chatty.js"></script>
-        <script src="js/message.js"></script>
+    <script src="https://use.fontawesome.com/9986bfaa56.js"></script>
+    <script src="./js/jQuery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="js/chatty.js"></script>
+    <script src="js/message.js"></script>
 
-        <script src="js/main.js"></script>
-        <script type="text/javascript" src="js/event-listeners.js"></script>
-        <script type="text/javascript" src="js/superheromessages.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/event-listeners.js"></script>
+    <script type="text/javascript" src="js/superheromessages.js"></script>
 
 
-    </body>
+</body>
+
 </html>

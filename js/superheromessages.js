@@ -5,14 +5,6 @@ let userMessage = document.getElementById("userMessage");
 let superHeroDropDown = document.getElementById("superhero");
 let messageContainer = document.querySelector('.message-container');
 
-let superHeroes = {
-	"Default Hero": "images/defaultusericon.png",
-	"Batman": "images/batmanicon.png",
-	"Wonder Woman": "images/wonderwomanicon.png",
-	"Superman": "images/supermanicon.png",
-	"Flash": "images/flashicon.png"
-};
-
 	Chatty.getUserInput = function(){
 		let userMessageInput = userMessage.value;
 		let superHero = superHeroDropDown.value;

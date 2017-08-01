@@ -10,7 +10,7 @@
   // End of Reading json data.
 
   // Render json data in page.
-  Chatty.renderJsonData = function (jsonData, img) {
+  Chatty.writeMessageToDOM = function (jsonData, img) {
     let messageContainer = document.querySelector('.message-container');
     let items = ''
     let keys = Object.keys(jsonData)
