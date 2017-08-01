@@ -119,6 +119,14 @@ button{
 	width: 70px;
 }
 
+.col-4{
+	position: fixed;
+}
+
+.col-8{
+	margin-left: 425px;
+}
+
 
 
 /*# sourceMappingURL=main.css.map */
