@@ -25,13 +25,13 @@ deleteAllMessagesBtn.addEventListener("click", () =>{
 
 //this is for the "POST" button
 postMessageBtn.addEventListener("click", ()=>{
-	Chatty.addMessage();
+	Chatty.getUserInput();
 });
 
 //this is for the "ENTER" key press
 userMessage.addEventListener('keyup', function (pushEnter) {
         if (pushEnter.which === 13) {
-        Chatty.addMessage();
+        Chatty.getUserInput();
         }
     });
 
