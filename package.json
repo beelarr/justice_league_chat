@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-server": "http-server",
-    "start-watch": "nodemon --ignore *.json --watch index.html js/*.js css/*.css",
-    "start-reload": "reload -b",
-    "dev": "npm run start-server | npm run start-reload | npm run start-watch"
+    "start-reload": "livereload './'",
+    "dev": "npm run start-server | npm run start-reload"
   },
   "repository": {
     "type": "git",
@@ -22,8 +21,8 @@
   "devDependencies": {
     "@types/jquery": "^3.2.10",
     "eslint": "^4.3.0",
+    "eslint-config-google": "^0.9.1",
     "jquery": "^3.2.1",
-    "nodemon": "^1.11.0",
-    "reload": "^2.2.0"
+    "livereload": "^0.6.2"
   }
 }
