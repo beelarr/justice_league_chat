@@ -1,11 +1,13 @@
 {
   Chatty.getJsonData = function() {
     $.ajax({
-      url: 'js/chatty.json'
+      url: 'js/chatty.json',
     }).done(function(data) {
       for (item in data) {
         if (item !== null) {
-          Chatty.insertNewMessage(data[item].message, 0);
+          console.log('JSON: ', item);
+
+          Chatty.insertNewMessage(data[item].message, data[item].name, 0);
         }
       }
       Chatty.writeJsonToDOM(Chatty.getAllMessages());
@@ -22,25 +24,26 @@
     let superHeroKey = superHeroDropDown.value;
     let superHeroName = superHeroDropDown[superHeroKey].getAttribute('name');
 
-    Chatty.insertNewMessage(userMessageValue, superHeroKey);
+    Chatty.insertNewMessage(userMessageValue, superHeroName, superHeroKey);
     Chatty.writeMessageToDOM(
       Chatty.getAllMessages(),
-      superHeroKey,
-      superHeroName
+      superHeroName,
+      superHeroKey
     );
+
     userMessage.value = '';
     userMessage.focus();
   };
   // End of Get user input and inserting into messages object.
 
-  /**
+  /*
    * Populate DOM with all messages in object.
    * 
    * @param {object} jsObject : messages object
    * @param {string} img : key to get img path 
    * @param {string} name : value from drop down 
    */
-  Chatty.writeMessageToDOM = function(jsObject, img, name) {
+  Chatty.writeMessageToDOM = function(jsObject, name, img) {
     let ulMessageElement = document.querySelector('.message-container');
     let liElement = document.createElement('li');
     liElement.classList =
@@ -50,7 +53,7 @@
 
     keys.forEach(function(item) {
       items = `<div class="messageHeader"><img src="${jsObject[item].img}">
-                  <h3>${name} Says:</h3>
+                  <h3>${jsObject[item].name} Says:</h3>
                 </div>
                 <div class="messageBody">
                   <p>${jsObject[item].message}</p>
@@ -65,7 +68,7 @@
   };
 
   /**
-   * Populate DOM with JSON object on load.
+   * Populate DOM from JSON object on load.
    * 
    * @param {object} jsObject : JSON obj is append to js obj.
    * @param {sting} img : key to get img path
@@ -79,7 +82,7 @@
     keys.forEach(function(item) {
       items += `<li class="list-group-item justify-content-between hero-messages">
                   <div class="messageHeader"><img src="${jsObject[item].img}">
-                  <h3>Concerned Citizen-${parseInt(item) + 1} Says:</h3>
+                  <h3>${jsObject[item].name}-${parseInt(item) + 1} Says:</h3>
                 </div>
                 <div class="messageBody">
                   <p>${jsObject[item].message}</p>
@@ -107,7 +110,7 @@
     reversedKeys.forEach(function(item) {
       items += `<li class="list-group-item justify-content-between hero-messages">
                   <div class="messageHeader"><img src="${jsObject[item].img}">
-                  <h3>${name} Says:</h3>
+                  <h3>${jsObject[item].name}-${parseInt(item) + 1} Says:</h3>
                 </div>
                 <div class="messageBody">
                   <p>${jsObject[item].message}</p>

@@ -1,22 +1,27 @@
 {
   "100": {
     "message": "I'm looking for a job as a senior web developer.",
+    "name": "Concerned Citizen",
     "img": "images/defaultusericon.png"
   },
   "101": {
     "message": "Why you want to do that? You don't like to be part of the JL?",
+    "name": "Concerned Citizen",
     "img": "images/defaultusericon.png"
   },
   "102": {
     "message": "I'm just want to try something different.",
+    "name": "Concerned Citizen",
     "img": "images/defaultusericon.png"
   },
   "103": {
     "message": "Try to look for a Junior position instead. You are just learning.",
+    "name": "Concerned Citizen",
     "img": "images/defaultusericon.png"
   },
   "104": {
     "message": "I don't know if developer's salary pays as much as been a supper hero.",
+    "name": "Concerned Citizen",
     "img": "images/defaultusericon.png"
   }
 }
