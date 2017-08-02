@@ -3,7 +3,7 @@ body {
     background-position: center; 
     background-attachment: fixed;
 	background-repeat: no-repeat;
-    color: rgb(27, 31, 110);
+    color: whitesmoke;
 
 }
 
@@ -14,7 +14,7 @@ h2{
 
 h3{
 
-	color: rgb(27, 31, 110);
+	color: white;
 	font-size: 1em;
 }
 
@@ -69,11 +69,11 @@ header {
 
 .list-group-item {
 	  background: rgba(132,0,0,.8);
-	  border:1.5px solid rgb(27, 31, 110);
+	  border:1.5px solid rgb(49, 56, 109);
 }
 
 .boxhover:hover {
-	background-color:rgb(27, 31, 110);
+	background-color:rgb(49, 56, 109);
 }
 
 
