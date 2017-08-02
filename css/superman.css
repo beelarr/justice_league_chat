@@ -1,37 +1,34 @@
 body {
-  	background-image: url("../images/Superman.jpg"); 
+      background-image: url("../images/Superman.jpg"); 
     background-position: fixed;
     color: darkblue;
 
 }
 
 h2{
-	font-size: 1.5em;
-	text-align: center;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 h3{
-	color: darkblue;
-	font-size: 1em;
+    color: darkblue;
+    font-size: 1em;
 }
 
 .navbar{
-	background-color: black;
+    background-color: black;
 }
 
 .column-img{
-	width: 100%;
-	height: 200px;
-	background-image: url("../images/img01.jpg");
-	background-size: cover;                     
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/supermanlogo.png");
+    background-size: cover;                     
     background-repeat: no-repeat;
     background-position: center center; 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-
-
-	/*<img src="images/img01.jpg">*/
 }
 
 .column-img img{
@@ -39,12 +36,6 @@ h3{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
-/*.col img{
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}*/
 
 .icon-logo img {
   display: block;
@@ -74,11 +65,11 @@ header {
   text-align: center; }
 
 .list-group-item {
-	  background: rgba(132,0,0,.8);
+      background: rgba(132,0,0,.8);
 }
 
 .boxhover:hover {
-	background-color:rgb(41, 51, 179);
+    background-color:rgb(41, 51, 179);
 }
 
 
@@ -88,45 +79,45 @@ header {
   justify-content: center; }
 
 .fa{
-	padding-right: 10px;
+    padding-right: 10px;
 }
 
 #superhero, #theme {
-	text-align: center;
+    text-align: center;
 }
 
 .heromessages{
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .hero-messages img{
-	width: 45px;
-	/*display: inline-block;*/
-	float: left;
-	margin: 5px;
+    width: 45px;
+    /*display: inline-block;*/
+    float: left;
+    margin: 5px;
 }
 
 .hero-messages h3{
-	font-size: 1.25em;
-	display: block;
-	padding-top: 15px;
-	/*text-align: right;*/
+    font-size: 1.25em;
+    display: block;
+    padding-top: 15px;
+    /*text-align: right;*/
 }
 
 .messageHeader{
-	display: block;
-	width: 100%;
-	height: 60px;
+    display: block;
+    width: 100%;
+    height: 60px;
 }
 
 .messageBody{
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 
 button{
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #superhero, #theme {
@@ -134,35 +125,22 @@ button{
 }
 
 .messages-cleared{
-	padding-top: 50px;
-	color: red;
-	font-size: 1.5em;
-	font-style: italic;
-	text-align: center;
+    padding-top: 50px;
+    color: red;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
 }
 
-.messages-cleared img{
-	width: 70px;
-}
-
-/*.col-4{
-	position: fixed;
-}
-
-.col-8{
-	margin-left: 425px;
+/*.messages-cleared img{
+    width: 70px;
 }*/
 
-.column-img{
-    width: 100%;
-    height: 200px;
-    background-image: url("../images/justice-league-logo.gif");
-    background-size: cover;                     
-    background-repeat: no-repeat;
-    background-position: center center; 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.fixed {
+        position: fixed;
 }
+
+
 
  
 /********************* THEME.JS STYLING SECTION ***************/

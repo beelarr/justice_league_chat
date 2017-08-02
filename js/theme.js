@@ -2,7 +2,7 @@ let random = document.querySelector("body");
 let tEnlarge = document.getElementById("enlargeText");
 
 tEnlarge.addEventListener("click", function(){
-    random.classList.add("biggerText");
+    random.classList.toggle("biggerText");
 });
 
 

@@ -22,8 +22,6 @@ h3{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-
-
 }
 
 .column-img img{
@@ -137,16 +135,6 @@ button{
 
  
 /********************* THEME.JS STYLING SECTION ***************/
-.darkTheme {
-    background-image: url("../images/DarkTheme.jpg"); 
-    background-size: contain;
-    color: white;
-}
-
-.clearBox {
-    background: rgba(0,0,0,.8);
-}
-
 .biggerText {
     font-size: 2em;
 }
