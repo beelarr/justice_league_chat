@@ -18,7 +18,7 @@ function start() {
     };
 
     DarkKnight.onclick = function () { 
-        changeStyleSheet("./css/test-css.css"); 
+        changeStyleSheet("./css/batman.css"); 
     };
 }
 

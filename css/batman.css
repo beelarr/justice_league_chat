@@ -63,11 +63,12 @@ header {
   text-align: center; }
 
 .list-group-item {
-	  background:rgba(0,0,0,.8);
+	  background:rgba(0,0,0,.8); 
+	  border: 1.5px solid rgb(38,38,38);
 }
 
 .boxhover:hover {
-	background-color:lightslategray;
+	background-color:rgb(38,38,38);;
 }
 
 .delete-container {

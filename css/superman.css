@@ -1,7 +1,7 @@
 body {
   	background-image: url("../images/Superman.jpg"); 
     background-position: fixed;
-    color: darkblue;
+    color: rgb(27, 31, 110);
 
 }
 
@@ -11,7 +11,7 @@ h2{
 }
 
 h3{
-	color: darkblue;
+	color: rgb(27, 31, 110);
 	font-size: 1em;
 }
 
@@ -66,10 +66,11 @@ header {
 
 .list-group-item {
 	  background: rgba(132,0,0,.8);
+	  border:1.5px solid rgb(27, 31, 110);
 }
 
 .boxhover:hover {
-	background-color:rgb(41, 51, 179);
+	background-color:rgb(27, 31, 110);
 }
 
 
