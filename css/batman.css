@@ -4,24 +4,24 @@ body {
 }
 
 h2{
-	font-size: 1.5em;
-	text-align: center;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 h3{
-	color: lightslategray;
-	font-size: 1em;
+    color: lightslategray;
+    font-size: 1em;
 }
 
 .navbar{
-	background-color: black;
+    background-color: black;
 }
 
 .column-img{
-	width: 100%;
-	height: 200px;
-	background-image: url("../images/batmanlogo.png");
-	background-size: cover;                     
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/batmanlogo.png");
+    background-size: cover;                     
     background-repeat: no-repeat;
     background-position: center center; 
     border-top-left-radius: 10px;
@@ -63,11 +63,12 @@ header {
   text-align: center; }
 
 .list-group-item {
-	  background:rgba(0,0,0,.8);
+	  background:rgba(0,0,0,.8); 
+	  border: 1.5px solid rgb(38,38,38);
 }
 
 .boxhover:hover {
-	background-color:lightslategray;
+	background-color:rgb(38,38,38);
 }
 
 .delete-container {
@@ -75,45 +76,45 @@ header {
   justify-content: center; }
 
 .fa{
-	padding-right: 10px;
+    padding-right: 10px;
 }
 
 #superhero, #theme {
-	text-align: center;
+    text-align: center;
 }
 
 .heromessages{
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .hero-messages img{
-	width: 45px;
-	/*display: inline-block;*/
-	float: left;
-	margin: 5px;
+    width: 45px;
+    /*display: inline-block;*/
+    float: left;
+    margin: 5px;
 }
 
 .hero-messages h3{
-	font-size: 1.25em;
-	display: block;
-	padding-top: 15px;
-	/*text-align: right;*/
+    font-size: 1.25em;
+    display: block;
+    padding-top: 15px;
+    /*text-align: right;*/
 }
 
 .messageHeader{
-	display: block;
-	width: 100%;
-	height: 60px;
+    display: block;
+    width: 100%;
+    height: 60px;
 }
 
 .messageBody{
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 
 button{
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #superhero, #theme {
@@ -121,15 +122,15 @@ button{
 }
 
 .messages-cleared{
-	padding-top: 50px;
-	color: red;
-	font-size: 1.5em;
-	font-style: italic;
-	text-align: center;
+    padding-top: 50px;
+    color: red;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
 }
 
 /*.messages-cleared img{
-	width: 70px;
+    width: 70px;
 }*/
 
 .fixed {

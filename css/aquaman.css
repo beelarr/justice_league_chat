@@ -64,10 +64,11 @@ header {
 
 .list-group-item {
 	  background:rgba(49,127,46,.8);
+	  border: 1.5px solid rgb(208, 127, 46);
 }
 
 .boxhover:hover {
-	background-color:rgb(208, 127, 46);;
+	background-color:rgb(208, 127, 46);
 }
 
 .delete-container {
