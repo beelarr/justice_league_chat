@@ -6,7 +6,7 @@
       for (item in data) {
         if (item !== null) {
           console.log('JSON: ', item);
-          
+
           Chatty.insertNewMessage(data[item].message, data[item].name, 0);
         }
       }
@@ -24,25 +24,26 @@
     let superHeroKey = superHeroDropDown.value;
     let superHeroName = superHeroDropDown[superHeroKey].getAttribute('name');
 
-    Chatty.insertNewMessage(userMessageValue, superHeroKey);
+    Chatty.insertNewMessage(userMessageValue, superHeroName, superHeroKey);
     Chatty.writeMessageToDOM(
       Chatty.getAllMessages(),
-      superHeroKey,
-      superHeroName
+      superHeroName,
+      superHeroKey
     );
+
     userMessage.value = '';
     userMessage.focus();
   };
   // End of Get user input and inserting into messages object.
 
-  /**
+  /*
    * Populate DOM with all messages in object.
    * 
    * @param {object} jsObject : messages object
    * @param {string} img : key to get img path 
    * @param {string} name : value from drop down 
    */
-  Chatty.writeMessageToDOM = function(jsObject, img, name) {
+  Chatty.writeMessageToDOM = function(jsObject, name, img) {
     let ulMessageElement = document.querySelector('.message-container');
     let liElement = document.createElement('li');
     liElement.classList =
