@@ -1,11 +1,13 @@
 {
   Chatty.getJsonData = function() {
     $.ajax({
-      url: 'js/chatty.json'
+      url: 'js/chatty.json',
     }).done(function(data) {
       for (item in data) {
         if (item !== null) {
-          Chatty.insertNewMessage(data[item].message, 0);
+          console.log('JSON: ', item);
+          
+          Chatty.insertNewMessage(data[item].message, data[item].name, 0);
         }
       }
       Chatty.writeJsonToDOM(Chatty.getAllMessages());
@@ -65,7 +67,7 @@
   };
 
   /**
-   * Populate DOM with JSON object on load.
+   * Populate DOM from JSON object on load.
    * 
    * @param {object} jsObject : JSON obj is append to js obj.
    * @param {sting} img : key to get img path
@@ -79,7 +81,7 @@
     keys.forEach(function(item) {
       items += `<li class="list-group-item justify-content-between hero-messages">
                   <div class="messageHeader"><img src="${jsObject[item].img}">
-                  <h3>Concerned Citizen-${parseInt(item) + 1} Says:</h3>
+                  <h3>${jsObject[item].name}-${parseInt(item) + 1} Says:</h3>
                 </div>
                 <div class="messageBody">
                   <p>${jsObject[item].message}</p>
