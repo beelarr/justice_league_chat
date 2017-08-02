@@ -78,8 +78,9 @@
     let ulMessageElement = document.querySelector('.message-container');
     let items = '';
     let keys = Object.keys(jsObject);
+    let reversedKeys = keys.reverse();
 
-    keys.forEach(function(item) {
+    reversedKeys.forEach(function(item) {
       items += `<li class="list-group-item justify-content-between hero-messages">
                   <div class="messageHeader"><img src="${jsObject[item].img}">
                   <h3>${jsObject[item].name}-${parseInt(item) + 1} Says:</h3>
