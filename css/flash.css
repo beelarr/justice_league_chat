@@ -66,6 +66,7 @@ header {
 
 .list-group-item {
 	  background: rgba(132,0,0,.8);
+	  border: 1.5px solid goldenrod;
 }
 
 .boxhover:hover {
