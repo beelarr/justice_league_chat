@@ -20,9 +20,9 @@ function start() {
     let Cyborg = document.getElementById("Cyborg");
     let Superman = document.getElementById("Superman");
 
-    // DefaultTheme.onclick = function () {
-    //     changeStyleSheet("./css/main.css")
-    // };
+    DefaultTheme.onclick = function () {
+        changeStyleSheet("./css/main.css")
+    };
 
     DarkKnight.onclick = function () { 
         changeStyleSheet("./css/batman.css"); 

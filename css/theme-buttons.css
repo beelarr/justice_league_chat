@@ -11,13 +11,10 @@
  	background-color: rgba(0,0,0,.0);
  	border: none;
  	width: 33%;
- 	height: 100px;
+ 	height: 110px;
+ 	align-items: center;
+ 	margin-bottom: 10px;
  }
-
-.container-modal{
-
-
-}
 
  #DefaultTheme{
  	background: url("../images/buttons/jllogo.png") no-repeat;
