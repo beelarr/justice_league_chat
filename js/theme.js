@@ -58,10 +58,10 @@ $(function () {
 
 });
 
-// $(#modalButton).click(function () {
-//     $("#register").modal('show');
-//
-// });
+$("#modalButton").click(function () {
+    $("#register").modal('show');
+
+});
 
 
 // function changeStyleSheet(theme) {
