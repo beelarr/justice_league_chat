@@ -1,32 +1,25 @@
+body {
+  	background-image: url("../images/Superman.jpg"); 
+    background-position: fixed;
+    color: darkblue;
+
+}
+
 h2{
 	font-size: 1.5em;
 	text-align: center;
 }
 
 h3{
-	color: red;
+	color: darkblue;
 	font-size: 1em;
 }
 
 .navbar{
 	background-color: black;
 }
-.column-img{
-	width: 100%;
-	height: 200px;
-	background-image: url("../images/img01.jpg");
-	background-size: cover;                     
-    background-repeat: no-repeat;
-    background-position: center center; 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 
-
-
-	/*<img src="images/img01.jpg">*/
-}
-
-.column-img img{
+.col img{
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -58,6 +51,15 @@ header {
 
 .list-group-item-danger {
   text-align: center; }
+
+.list-group-item {
+	  background: rgba(132,0,0,.8);
+}
+
+.boxhover:hover {
+	background-color:rgb(41, 51, 179);
+}
+
 
 
 .delete-container {
@@ -110,11 +112,6 @@ button{
     text-align: center;
 }
 
-.darkTheme {
-    background-image: url("images/DarkTheme.jpg"); 
-    color: white;
-}
-
 .messages-cleared{
 	padding-top: 50px;
 	color: red;
@@ -123,29 +120,31 @@ button{
 	text-align: center;
 }
 
-/*.messages-cleared img{
+.messages-cleared img{
 	width: 70px;
-}*/
-
-.fixed {
-        position: fixed;
 }
 
-.list-group-item {
-	/*background-color: rgba(0,0,0,.8);*/
+.col-4{
+	position: fixed;
+}
+
+.col-8{
+	margin-left: 425px;
+}
+
+.column-img{
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/justice-league-logo.gif");
+    background-size: cover;                     
+    background-repeat: no-repeat;
+    background-position: center center; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
  
 /********************* THEME.JS STYLING SECTION ***************/
-.darkTheme {
-    background-image: url("../images/DarkTheme.jpg"); 
-    background-size: contain;
-    color: white;
-}
-
-.clearBox {
-    background: rgba(0,0,0,.8);
-}
 
 .biggerText {
     font-size: 2em;
