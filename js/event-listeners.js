@@ -4,6 +4,13 @@
     let userMessage = document.getElementById('userMessage');
     let postMessageBtn = document.getElementById('postMessage');
     let deleteAllMessagesBtn = document.getElementById('deleteAllMessages');
+    let superHeroDropDown = document.querySelector('#superhero');
+
+    superHeroDropDown.addEventListener('keypress', function(event) {
+      if (event.keyCode === 13 && userMessage.value !== '') {
+        Chatty.getUserInput();
+      }
+    });
 
     // Delete all messages and clear DOM.
     deleteAllMessagesBtn.addEventListener('click', function() {
@@ -28,11 +35,10 @@
 
     // Append message by enter key.
     userMessage.addEventListener('keyup', function(event) {
-      if (event.keyCode === 13) {
+      if (event.keyCode === 13 && document.activeElement && userMessage.value !== '') {
         Chatty.getUserInput();
       }
     });
   };
   Chatty.eventsHanglers();
 }
-
