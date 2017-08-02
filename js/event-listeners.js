@@ -1,39 +1,38 @@
-let messageContainer = document.querySelector(".message-container");
-let noMessageElement = document.querySelector(".messages-cleared");
+{
+  Chatty.eventsHanglers = function() {
+    let messageContainer = document.querySelector('.message-container');
+    let userMessage = document.getElementById('userMessage');
+    let postMessageBtn = document.getElementById('postMessage');
+    let deleteAllMessagesBtn = document.getElementById('deleteAllMessages');
 
-let userMessage = document.getElementById("userMessage");
-let postMessageBtn = document.getElementById("postMessage");
-let superHeroDropDown = document.getElementById("superhero");
+    // Delete all messages and clear DOM.
+    deleteAllMessagesBtn.addEventListener('click', function() {
+      Chatty.deleteAllMessages();
+      messageContainer.innerHTML = `<div class="messages-cleared">
+                                    All Messages Have Been Cleared<br>
+                                    <img src="images/jllogo.png">
+                                  </div>`;
+    });
 
-let enlargeTextBtn = document.getElementById("enlargeText");
-let deleteAllMessagesBtn = document.getElementById("deleteAllMessages");
+    // Deleting a single message.
+    messageContainer.addEventListener('click', function(event) {
+      Chatty.deleteSingleMessage(event.target.id);
+      messageContainer.innerHTML = '';
+      Chatty.rewriteMessagesAfterDelete(Chatty.getAllMessages());
+    });
 
-//////CLEAR ALL MESSAGES////
-/*I tried to connect the chatty.js to delete all messages but 
-because we decided to create messages based on selected hero, I didn't know how 
-to add those to the array.
-*/
+    // Append message by clicking post btn.
+    postMessageBtn.addEventListener('click', () => {
+      Chatty.getUserInput();
+    });
 
-deleteAllMessagesBtn.addEventListener("click", () => {
-  Chatty.deleteAllMessages();
-  messageContainer.innerHTML = `<div class="messages-cleared"><img src="images/justice-league-logo.gif"></div>`;
-});
+    // Append message by enter key.
+    userMessage.addEventListener('keyup', function(event) {
+      if (event.keyCode === 13) {
+        Chatty.getUserInput();
+      }
+    });
+  };
+  Chatty.eventsHanglers();
+}
 
-messageContainer.addEventListener("click", function(event) {
-  console.log("Delete Btn: ", event.target.id);
-  Chatty.deleteSingleMessage(event.target.id);
-});
-
-////POST MESSAGES TO THE DOM////////
-
-//this is for the "POST" button
-postMessageBtn.addEventListener("click", () => {
-  Chatty.getUserInput();
-});
-
-//this is for the "ENTER" key press
-userMessage.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    Chatty.getUserInput();
-  }
-});
