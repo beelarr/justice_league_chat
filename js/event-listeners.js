@@ -35,3 +35,4 @@
   };
   Chatty.eventsHanglers();
 }
+
