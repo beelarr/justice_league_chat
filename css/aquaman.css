@@ -3,7 +3,7 @@ body {
     background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-    color:rgb(208, 127, 46);;
+    color:whitesmoke;
 }
 
 h2{
@@ -12,7 +12,7 @@ h2{
 }
 
 h3{
-	color: rgb(208, 127, 46);
+	color: whitesmoke;
 	font-size: 1em;
 }
 

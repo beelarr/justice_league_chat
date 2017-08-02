@@ -3,7 +3,7 @@ body {
     background-position: center; 
     background-attachment: fixed;
 	background-repeat: no-repeat;
-    color: darkgoldenrod;
+    color: whitesmoke;
 }	
 
 
@@ -13,7 +13,7 @@ h2{
 }
 
 h3{
-	color: goldenrod;
+	color: whitesmoke;
 	font-size: 1em;
 }
 
