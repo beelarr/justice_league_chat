@@ -53,7 +53,7 @@
 
     keys.forEach(function(item) {
       items = `<div class="messageHeader"><img src="${jsObject[item].img}">
-                  <h3>${name} Says:</h3>
+                  <h3>${jsObject[item].name} Says:</h3>
                 </div>
                 <div class="messageBody">
                   <p>${jsObject[item].message}</p>
@@ -110,7 +110,7 @@
     reversedKeys.forEach(function(item) {
       items += `<li class="list-group-item justify-content-between hero-messages">
                   <div class="messageHeader"><img src="${jsObject[item].img}">
-                  <h3>${name} Says:</h3>
+                  <h3>${jsObject[item].name}-${parseInt(item) + 1} Says:</h3>
                 </div>
                 <div class="messageBody">
                   <p>${jsObject[item].message}</p>
