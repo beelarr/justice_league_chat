@@ -5,4 +5,5 @@ package-lock.json
 .editorconfig
 css/main.sass
 .sass-cache/*
-
+.DS_Store
+images/.DS_Store
