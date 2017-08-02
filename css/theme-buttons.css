@@ -10,9 +10,42 @@
  #theme-button-elements button{
  	background-color: rgba(0,0,0,.0);
  	border: none;
- 	width: 100%;
+ 	width: 20%;
+ 	height: 100px;
  }
 
- #DarkKnight{
+ #DefaultTheme{
+ 	background: url("../images/buttons/jllogo.png") no-repeat;
+    background-position: center;  
 
- }
+}
+#DarkKnight{
+ 	background: url("../images/buttons/batman.png") no-repeat;
+    background-position: center;  
+
+}
+#WonderWoman{
+ 	background: url("../images/buttons/wonderwoman.png") no-repeat;
+    background-position: center;  
+
+}
+#Aquaman{
+ 	background: url("../images/buttons/aquaman.png") no-repeat;
+    background-position: center;  
+
+}
+#Flash{
+ 	background: url("../images/buttons/flash.png") no-repeat;
+    background-position: center;  
+
+}
+#Cyborg{
+ 	background: url("../images/buttons/cyborg.png") no-repeat;
+    background-position: center;  
+
+}
+#Superman{
+ 	background: url("../images/buttons/superman.png") no-repeat;
+    background-position: center;  
+
+}
