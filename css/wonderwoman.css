@@ -63,7 +63,8 @@ header {
   text-align: center; }
 
 .list-group-item {
-	  background:rgba(41,6,179,.8);;
+	  background:rgba(27, 31, 110,.8);
+	  border: 1.5px solid rgb(132,0,0);
 }
 
 .boxhover:hover {
