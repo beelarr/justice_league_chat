@@ -1,12 +1,12 @@
 {
   let superHeroes = {
-    0: "images/defaultusericon.png",
-    1: "images/batmanicon.png",
-    2: "images/wonderwomanicon.png",
-    3: "images/supermanicon.png",
-    4: "images/flashicon.png",
-    5: "images/aquamanicon.png",
-    6: "images/cyborgicon.png",
+    0: 'images/defaultusericon.png',
+    1: 'images/batmanicon.png',
+    2: 'images/wonderwomanicon.png',
+    3: 'images/supermanicon.png',
+    4: 'images/flashicon.png',
+    5: 'images/aquamanicon.png',
+    6: 'images/cyborgicon.png',
   };
 
   let messages = {};
@@ -19,7 +19,7 @@
     return (messages = {});
   };
 
-  /**
+  /*
    * Inserts a new message to messages object.
    * 
    * @param {string} : user input 
@@ -30,17 +30,17 @@
     let indexes = Object.keys(messages);
 
     if (indexes.length === 0) {
-      messages[0] = { message: message, img: superHeroes[img] };
+      messages[0] = {message: message, img: superHeroes[img]};
       return messages;
     } else {
       let reverseIndexes = indexes.reverse();
       let lastIndex = parseInt(reverseIndexes[0]);
-      messages[lastIndex + 1] = { message: message, img: superHeroes[img] };
+      messages[lastIndex + 1] = {message: message, img: superHeroes[img]};
       return messages;
     }
   };
 
-  /**
+  /*
    * Deletes a single message id and returns messages object. 
    * 
    * @param {string} : message id 
