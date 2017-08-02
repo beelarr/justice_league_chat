@@ -5,8 +5,6 @@
     }).done(function(data) {
       for (item in data) {
         if (item !== null) {
-          console.log('JSON: ', item);
-
           Chatty.insertNewMessage(data[item].message, data[item].name, 0);
         }
       }
