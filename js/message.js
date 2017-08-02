@@ -22,20 +22,21 @@
   /*
    * Inserts a new message to messages object.
    * 
-   * @param {string} : user input 
-   * @param {sting} : super hero image key 
+   * @param {string} message : user input 
+   * @param {string} name : name from drop down
+   * @param {sting} img : super hero image key 
    * @returns {object} : all messages
    */
-  Chatty.insertNewMessage = function(message, img) {
+  Chatty.insertNewMessage = function(message, name, img) {
     let indexes = Object.keys(messages);
 
     if (indexes.length === 0) {
-      messages[0] = {message: message, img: superHeroes[img]};
+      messages[0] = {message: message, name: name, img: superHeroes[img]};
       return messages;
     } else {
       let reverseIndexes = indexes.reverse();
       let lastIndex = parseInt(reverseIndexes[0]);
-      messages[lastIndex + 1] = {message: message, img: superHeroes[img]};
+      messages[lastIndex + 1] = {message: message, name: name, img: superHeroes[img]};
       return messages;
     }
   };
