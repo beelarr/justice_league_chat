@@ -9,8 +9,8 @@
     deleteAllMessagesBtn.addEventListener('click', function() {
       Chatty.deleteAllMessages();
       messageContainer.innerHTML = `<div class="messages-cleared">
-                                    All Messages Have Been Cleared<br>
-                                    <img src="images/jllogo.png">
+                                    
+                                  <img src="images/justice-league-logo.gif">
                                   </div>`;
     });
 

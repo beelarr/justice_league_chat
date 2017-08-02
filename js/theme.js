@@ -28,10 +28,15 @@ window.onload = start;
 
 
 
-$(document).ready(function () {
+$(function () {
     $('#register').modal('show');
 
 });
+
+// $(BUTTON SOME NAME).click(function () {
+//     $("#register").modal('show');
+//
+// });
 
 
 function changeStyleSheet(theme) {
