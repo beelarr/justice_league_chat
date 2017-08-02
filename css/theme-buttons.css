@@ -10,9 +10,14 @@
  #theme-button-elements button{
  	background-color: rgba(0,0,0,.0);
  	border: none;
- 	width: 20%;
+ 	width: 30%;
  	height: 100px;
  }
+
+.container-modal{
+
+
+}
 
  #DefaultTheme{
  	background: url("../images/buttons/jllogo.png") no-repeat;

@@ -20,9 +20,9 @@ function start() {
     let Cyborg = document.getElementById("Cyborg");
     let Superman = document.getElementById("Superman");
 
-    DefaultTheme.onclick = function () { 
-        changeStyleSheet("./css/main.css") 
-    };
+    // DefaultTheme.onclick = function () {
+    //     changeStyleSheet("./css/main.css")
+    // };
 
     DarkKnight.onclick = function () { 
         changeStyleSheet("./css/batman.css"); 
@@ -44,47 +44,51 @@ function start() {
         changeStyleSheet("./css/cyborg.css"); 
     };
 
+    Superman.onclick = function () {
+        changeStyleSheet("./css/superman.css");
+    };
+}
+
+window.onload = start;
+
+
 
 $(function () {
     $('#register').modal('show');
 
 });
 
-// $(BUTTON SOME NAME).click(function () {
+// $(#modalButton).click(function () {
 //     $("#register").modal('show');
 //
 // });
 
 
-function changeStyleSheet(theme) {
-    document.getElementById("pagetheme").setAttribute("href", theme);
-}
-
-function start() {
-    let DefaultTheme = document.getElementById("DefaultThemeModal");
-    let DarkKnight = document.getElementById("DarkKnightModal");
-
-    DefaultTheme.onclick = function () {
-        changeStyleSheet("./css/main.css")
-    };
-
-    DarkKnight.onclick = function () {
-        changeStyleSheet("./css/test-css.css");
-    };
-}
-
-window.onload = start;
-
-
+// function changeStyleSheet(theme) {
+//     document.getElementById("pagetheme").setAttribute("href", theme);
+// }
+//
+// function start() {
+//     let DefaultTheme = document.getElementById("DefaultThemeModal");
+//     let DarkKnight = document.getElementById("DarkKnightModal");
+//
+//     DefaultTheme.onclick = function () {
+//         changeStyleSheet("./css/main.css")
+//     };
+//
+//     DarkKnight.onclick = function () {
+//         changeStyleSheet("./css/test-css.css");
+//     };
+// }
+//
+// window.onload = start;
 
 
 
 
-    Superman.onclick = function () { 
-        changeStyleSheet("./css/superman.css"); 
-    };
-}
 
 
-window.onload = start;
+
+
+
 
