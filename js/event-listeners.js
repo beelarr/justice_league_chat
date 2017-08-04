@@ -1,13 +1,7 @@
 {
   Chatty.eventsHanglers = function() {
-    let messageContainer = document.querySelector('.message-container');
-    let userMessage = document.getElementById('userMessage');
-    let postMessageBtn = document.getElementById('postMessage');
-    let deleteAllMessagesBtn = document.getElementById('deleteAllMessages');
-    let superHeroDropDown = document.querySelector('#superhero');
-
-    $('#superhero').keypress (function(event) {
-      if (event.keyCode === 13 && userMessage.value !== '') {
+      $('#superhero').keypress (function(event) {
+      if (event.keyCode === 13 && $('#userMessage').value !== '') {
         Chatty.getUserInput();
       }
     });
@@ -24,8 +18,8 @@
     // Deleting a single message.
     $(".message-container").click(function(event) {
       Chatty.deleteSingleMessage(event.target.id);
-      // $('.message-container').replaceWith("");
-      messageContainer.innerHTML = '';
+      console.log($('.message-container'))
+      $('.message-container').innerHTML = '';
       Chatty.rewriteMessagesAfterDelete(Chatty.getAllMessages());
     });
 

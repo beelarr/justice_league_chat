@@ -18,17 +18,13 @@
   Chatty.getUserInput = function() {
     let userMessage = $('#userMessage');
     // $('#userMessage')
-    let superHeroDropDown = $("#superhero")
+    let superHeroDropDown = $("#superhero");
 
     let userMessageValue = $('#userMessage').val();
 
-
-
-    // let superHeroName = superHeroDropDown[superHeroKey].getAttribute('name');
-
-     superHeroDropDown.each((index, element) => {
-         let superHeroName =  element[index].getAttribute('name')
-         let superHeroKey = index
+      superHeroDropDown.each((index, element) => {
+         let superHeroName =  element[index].getAttribute('name');
+         let superHeroKey = index;
 
     Chatty.insertNewMessage(userMessageValue, superHeroName, superHeroKey);
     Chatty.writeMessageToDOM(
@@ -36,9 +32,7 @@
         superHeroName,
         superHeroKey
     );
-    })
-
-
+    });
 
     userMessage.value = '';
     userMessage.focus();
@@ -54,22 +48,18 @@
    */
     Chatty.writeMessageToDOM = function(jsObject, name, img) {
         let ulMessageElement = $('.message-container');
-        // console.log(ulMessageElement)
-
 
         ulMessageElement.each((index, element) =>{
-            // console.log(element)
-            let liElement = $('<li></li>')
+            let liElement = $('<li></li>');
             liElement.addClass('list-group-item justify-content-between hero-messages');
             liElement.each((indexLi, elementLi) => {
-            // console.log(elementLi)
 
 
         let items = '';
         let keys = Object.keys(jsObject);
 
         keys.forEach(function(item) {
-            console.log(`${jsObject[item].message}`)
+            console.log(`${jsObject[item].message}`);
             items = `<div class="messageHeader"><img src="${jsObject[item].img}">
                   <h3>${jsObject[item].name} Says:</h3>
                 </div>
@@ -80,18 +70,12 @@
                     <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message</button>
                   </p>
                 </div>`;
-            console.log(items)
-            console.log(element)
-            console.log(elementLi)
            elementLi.innerHTML = items
 
         });
         element.insertBefore(elementLi, element.childNodes[0]);
             })
         })
-
-
-
     };
 
   /**
@@ -103,7 +87,6 @@
    */
   Chatty.writeJsonToDOM = function(jsObject, img, name) {
     let ulMessageElement = $('.message-container');
-    // $('.message-container')
     let items = '';
     let keys = Object.keys(jsObject);
     let reversedKeys = keys.reverse();
@@ -134,7 +117,6 @@
    */
   Chatty.rewriteMessagesAfterDelete = function(jsObject) {
     let ulMessageElement = $('.message-container');
-    // $(".message-container")
     let items = '';
     let keys = Object.keys(jsObject);
     let reversedKeys = keys.reverse();
@@ -154,7 +136,5 @@
                 </li>`;
     });
     ulMessageElement.html(items);
-      // $('.message-container').replaceWith(items)
   };
-  // End of Render JSON data in page.
 }
