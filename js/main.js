@@ -16,18 +16,29 @@
 
   // Get user input and inserting into messages object.
   Chatty.getUserInput = function() {
-    let userMessage = document.querySelector('#userMessage');
-    let superHeroDropDown = document.querySelector('#superhero');
-    let userMessageValue = userMessage.value;
-    let superHeroKey = superHeroDropDown.value;
-    let superHeroName = superHeroDropDown[superHeroKey].getAttribute('name');
+    let userMessage = $('#userMessage');
+    // $('#userMessage')
+    let superHeroDropDown = $("#superhero")
+
+    let userMessageValue = $('#userMessage').val();
+
+
+
+    // let superHeroName = superHeroDropDown[superHeroKey].getAttribute('name');
+
+     superHeroDropDown.each((index, element) => {
+         let superHeroName =  element[index].getAttribute('name')
+         let superHeroKey = index
 
     Chatty.insertNewMessage(userMessageValue, superHeroName, superHeroKey);
     Chatty.writeMessageToDOM(
       Chatty.getAllMessages(),
-      superHeroName,
-      superHeroKey
+        superHeroName,
+        superHeroKey
     );
+    })
+
+
 
     userMessage.value = '';
     userMessage.focus();
@@ -41,16 +52,16 @@
    * @param {string} img : key to get img path 
    * @param {string} name : value from drop down 
    */
-  Chatty.writeMessageToDOM = function(jsObject, name, img) {
-    let ulMessageElement = document.querySelector('.message-container');
-    let liElement = document.createElement('li');
-    liElement.classList =
-      'list-group-item justify-content-between hero-messages';
-    let items = '';
-    let keys = Object.keys(jsObject);
+    Chatty.writeMessageToDOM = function(jsObject, name, img) {
+        let ulMessageElement = document.querySelector('.message-container');
+        let liElement = document.createElement('li');
+        liElement.classList =
+            'list-group-item justify-content-between hero-messages';
+        let items = '';
+        let keys = Object.keys(jsObject);
 
-    keys.forEach(function(item) {
-      items = `<div class="messageHeader"><img src="${jsObject[item].img}">
+        keys.forEach(function(item) {
+            items = `<div class="messageHeader"><img src="${jsObject[item].img}">
                   <h3>${jsObject[item].name} Says:</h3>
                 </div>
                 <div class="messageBody">
@@ -60,10 +71,10 @@
                     <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message</button>
                   </p>
                 </div>`;
-      liElement.innerHTML = items;
-    });
-    ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
-  };
+            liElement.innerHTML = items;
+        });
+        ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
+    };
 
   /**
    * Populate DOM from JSON object on load.
@@ -73,7 +84,8 @@
    * @param {string} name :  value from drop down
    */
   Chatty.writeJsonToDOM = function(jsObject, img, name) {
-    let ulMessageElement = document.querySelector('.message-container');
+    let ulMessageElement = $('.message-container');
+    // $('.message-container')
     let items = '';
     let keys = Object.keys(jsObject);
     let reversedKeys = keys.reverse();
@@ -92,7 +104,9 @@
                 </div>
                 </li>`;
     });
-    ulMessageElement.innerHTML = items;
+
+     ulMessageElement.html(items)
+
   };
 
   /**
@@ -101,7 +115,8 @@
    * @param {object} jsObject : all messages obj
    */
   Chatty.rewriteMessagesAfterDelete = function(jsObject) {
-    let ulMessageElement = document.querySelector('.message-container');
+    let ulMessageElement = $('.message-container');
+    // $(".message-container")
     let items = '';
     let keys = Object.keys(jsObject);
     let reversedKeys = keys.reverse();
@@ -120,7 +135,8 @@
                 </div>
                 </li>`;
     });
-    ulMessageElement.innerHTML = items;
+    ulMessageElement.html(items);
+      // $('.message-container').replaceWith(items)
   };
   // End of Render JSON data in page.
 }
