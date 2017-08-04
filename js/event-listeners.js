@@ -6,36 +6,37 @@
     let deleteAllMessagesBtn = document.getElementById('deleteAllMessages');
     let superHeroDropDown = document.querySelector('#superhero');
 
-    superHeroDropDown.addEventListener('keypress', function(event) {
+    $('#superhero').keypress (function(event) {
       if (event.keyCode === 13 && userMessage.value !== '') {
         Chatty.getUserInput();
       }
     });
 
     // Delete all messages and clear DOM.
-    deleteAllMessagesBtn.addEventListener('click', function() {
+    $("#deleteAllMessages").click(function() {
       Chatty.deleteAllMessages();
-      messageContainer.innerHTML = `<div class="messages-cleared">
+      $('.message-container').replaceWith(`<div class="messages-cleared">
                                     
                                   <img src="images/justice-league-logo.gif">
-                                  </div>`;
+                                  </div>`);
     });
 
     // Deleting a single message.
-    messageContainer.addEventListener('click', function(event) {
+    $(".message-container").click(function(event) {
       Chatty.deleteSingleMessage(event.target.id);
+      // $('.message-container').replaceWith("");
       messageContainer.innerHTML = '';
       Chatty.rewriteMessagesAfterDelete(Chatty.getAllMessages());
     });
 
     // Append message by clicking post btn.
-    postMessageBtn.addEventListener('click', () => {
+    $('#postMessage').click(function () {
       Chatty.getUserInput();
     });
 
     // Append message by enter key.
-    userMessage.addEventListener('keyup', function(event) {
-      if (event.keyCode === 13 && document.activeElement && userMessage.value !== '') {
+    $('#userMessage').keyup (function(event) {
+      if (event.keyCode === 13 && document.activeElement && $('#userMessage').value !== '') {
         Chatty.getUserInput();
       }
     });
