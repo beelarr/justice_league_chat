@@ -53,14 +53,23 @@
    * @param {string} name : value from drop down 
    */
     Chatty.writeMessageToDOM = function(jsObject, name, img) {
-        let ulMessageElement = document.querySelector('.message-container');
-        let liElement = document.createElement('li');
-        liElement.classList =
-            'list-group-item justify-content-between hero-messages';
+        let ulMessageElement = $('.message-container');
+        // console.log(ulMessageElement)
+
+
+        ulMessageElement.each((index, element) =>{
+            // console.log(element)
+            let liElement = $('<li></li>')
+            liElement.addClass('list-group-item justify-content-between hero-messages');
+            liElement.each((indexLi, elementLi) => {
+            // console.log(elementLi)
+
+
         let items = '';
         let keys = Object.keys(jsObject);
 
         keys.forEach(function(item) {
+            console.log(`${jsObject[item].message}`)
             items = `<div class="messageHeader"><img src="${jsObject[item].img}">
                   <h3>${jsObject[item].name} Says:</h3>
                 </div>
@@ -71,9 +80,18 @@
                     <i class="fa fa-trash-o" aria-hidden="true"></i>Delete Message</button>
                   </p>
                 </div>`;
-            liElement.innerHTML = items;
+            console.log(items)
+            console.log(element)
+            console.log(elementLi)
+           elementLi.innerHTML = items
+
         });
-        ulMessageElement.insertBefore(liElement, ulMessageElement.childNodes[0]);
+        element.insertBefore(elementLi, element.childNodes[0]);
+            })
+        })
+
+
+
     };
 
   /**
